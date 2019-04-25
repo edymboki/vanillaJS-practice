@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter Practice</title>
+</head>
+<body>
+    <h1>filter Method</h1>
+    <div>
+        <ol>
+            The following is how filter works:
+            <li>Creates a new array</li>
+            <li>Iterates through an array</li>
+            <li>Runs a callback function on each value in the array</li>
+            <li>If the callback function returns true, that value will be added to the new array</li>
+            <li>If the callback function returns false, that value will be ignored from the new array</li>
+            <li><strong>Note:</strong> The result of the callback will ALWAYS be a boolean</li>
+        </ol>
+        <h3>Examples of filter functions:</h3>
+        <div>
+            <p>
+                1. Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
+            </p>
+            <ul>
+                Examples:
+                <li>
+                    filterByValue([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner')
+                    <div>
+                        // [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                2. Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.
+            </p>
+            <ul>
+                Examples:
+                <li>find([1,2,3,4,5], 3) // 3</li>
+                <li>find([1,2,3,4,5], 10) // undefined</li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                3. Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the arrayt.
+            </p>
+            <ul>
+                Examples:
+                <li>
+                    findInObj([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner',true) // {first: 'Tim', last:"Garcia", isCatOwner: true}
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) removed. Every character in the new string should be lowercased.
+            </p>
+            <ul>
+                Examples:
+                <li>removeVowels('Elie') // ('l')</li>
+                <li>removeVowels('TIM') // ('tm')</li>
+                <li>removeVowels('ZZZZZZ') // ('zzzzzz')</li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and fitler to double and then filter the odd numbers).
+            </p>
+            <ul>
+                Examples:
+                <li>doubleOddNumbers([1,2,3,4,5]) // [2,6,10]</li>
+                <li>doubleOddNumbers([4,4,4,4,4]) // []</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./filter.js"></script>
+</body>
+</html>

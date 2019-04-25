@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>forEach Practice</title>
 </head>
+
 <body>
-    <h1>Vowel Count Function</h1>
-    <p>Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count</p>
+    <h1>forEach Method</h1>
+    <div>
+        <ol>
+            The Following is how forEach works:
+            <li>Iterates through an array</li>
+            <li>Runs a callback function on each value in the array</li>
+            <li><strong>Note:</strong> forEach ALWAYS returns undefined</li>
+        </ol>
+        <h3>Examples of forEach functions:</h3>
+        <div>
+            <p>
+                1. Write a function called doubleValues which accepts an array and returns a new array with all the
+                values in the array passed to the function doubled
+            </p>
+            <ul>
+                Examples:
+                <li>doubleValues([1,2,3]) // [2,4,6]</li>
+                <li>doubleValues([5,1,2,3,10]) // [10,2,4,6,20]</li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                2. Write a function called onlyEvenValues which accepts an array and returns a new array with only the
+                even values in the array passed to the function.
+            </p>
+            <ul>
+                Examples:
+                <li>onlyEvenValues([1,2,3])</li>
+                <li>onlyEvenValues([5,1,2,3,10])</li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                3. Write a function called showFirstAndLast which accepts an array of strings and returns a new array with
+                only the first and last character of each string.
+            </p>
+            <ul>
+                Examples:
+                <li>
+                    showFirstAndLast(['colt','matt', 'tim', 'udemy']) // ["ct", "mt", "tm", "uy"]
+                </li>
+                <li>
+                    showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                4. Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns
+                the array passed to the function with the new key and value added for each object
+            </p>
+            <ul>
+                Examples:
+                <li>
+                    addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title',
+                    'instructor')
+                    <div>
+                        // [{name: 'Elie', title:'instructor'}, {name: 'Tim', title:'instructor'}, {name: 'Matt',
+                    title:'instructor'}, {name: 'Colt', title:'instructor'}]
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>
+                Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count
+            </p>
+            <ul>
+                Examples:
+                <li>
+                    vowelCount('Elie') // {e:2,i:1};
+                </li>
+                <li>
+                    vowelCount('Tim') // {i:1};
+                </li>
+                <li>
+                    vowelCount('Matt') // {a:1})
+                </li>
+                <li>
+                    vowelCount('hmmm') // {};
+                </li>
+                <li>
+                    vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script src="./forEach.js"></script>
 </body>
+
 </html>

@@ -99,6 +99,7 @@ button {
     height: 5px;
     background-color: #018fc6;
     border-radius: 20px;
+    /* width: 100%; */
 }
 #handle {
     width: 15px;

@@ -9,6 +9,8 @@ let bgPoster = $("#bg img");
 let currentSong = 0;
 let song = new Audio();
 
+window.onload = playSong;
+
 const playPromise = song.play();
 
 if(playPromise !== null) {
@@ -17,7 +19,6 @@ if(playPromise !== null) {
     })
 }
 
-window.onload = playSong;
 
 $("#play").on('click', playOrPauseSong);
 $("#back").on('click', back);
@@ -47,9 +48,9 @@ song.addEventListener("timeupdate", function() {
 })
 
 function next() {
+    currentSong++;
     let songPath = "songs/" + songs[currentSong];
     let posterPath = "posters/" + posters[currentSong];
-    currentSong++;
     if(currentSong > songs.length - 1) {
         currentSong = 0;
     }
@@ -60,9 +61,9 @@ function next() {
 }
 
 function back() {
+    currentSong--;
     let songPath = "songs/" + songs[currentSong];
     let posterPath = "posters/" + posters[currentSong];
-    currentSong--;
     if(currentSong < 0) {
         currentSong = 2;
     }
